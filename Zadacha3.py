@@ -1,8 +1,8 @@
 # Написать функцию, аргументы имена сотрудников, возвращает словарь, ключи — первые буквы имён, 
 # значения — списки, содержащие имена, начинающиеся с соответствующей буквы.
 
-names = ["Иван", "Мария", "Петр", "Илья", "Марина", "Алина", "Бибочка"]
-names.sort(key=lambda x: x.lower())
+# names = ["Иван", "Мария", "Петр", "Илья", "Марина", "Алина", "Бибочка"]
+# names.sort(key=lambda x: x.lower())
 
 def thesaurus(names):
     res = {}
@@ -13,6 +13,8 @@ def thesaurus(names):
         res[key].append(name)
     return res
 
+names = input("Введите имена сотрудников через пробел: ").split()
+names.sort(key=lambda x: x.lower())
 print(thesaurus(names))
 
 
